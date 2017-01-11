@@ -58,7 +58,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         button_upload.setOnClickListener(this);
         button_recieve.setOnClickListener(this);
-        cameraButton.setOnClickListener(this);
+        cameraButton.setOnClickListener(cameraListener);
+    }
+    private View.OnClickListener cameraListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            takephoto(v);
+        }
     }
 
 
